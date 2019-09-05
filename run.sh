@@ -1,0 +1,1 @@
+mvn compile exec:java -Dexec.mainClass=io.oreon.crypto.CryptoPipeline -Dexec.args="--project=crypto-predictor-analyzer --runner=DataflowRunner --maxNumWorkers=1 --autoscalingAlgorithm=NONE --workerMachineType=n1-highcpu-4"

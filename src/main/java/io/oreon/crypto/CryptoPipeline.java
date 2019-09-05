@@ -71,7 +71,7 @@ public class CryptoPipeline {
 
         @ProcessElement
         public void processElement(@Element TradeData tradeData, OutputReceiver<TradeData> out) {
-            Instant timestamp = Instant.ofEpochMilli(Long.parseLong(tradeData.microtimestamp));
+            Instant timestamp = Instant.ofEpochMilli(Long.parseLong(tradeData.microtimestamp) / 1000);
             out.outputWithTimestamp(tradeData, timestamp);
         }
     }
